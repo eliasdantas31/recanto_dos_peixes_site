@@ -2,15 +2,23 @@
   "name": "projeto_pesqueiro",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+    "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.15.4"
-  }
+    "parcel": "^2.15.4",
+    "sass": "^1.91.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }

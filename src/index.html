@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recanto Dos Peixes</title>
-    <link rel="stylesheet" href="main.scss">
+    <!-- SCSS -->
+    <link rel="stylesheet" href="./styles/main.scss">
 </head>
+
 <body>
-    
-    <script src="main.js"></script>
+    <div id="carousel" class="carousel slide carousel-div" data-bs-ride="carousel">
+        <div class="carousel-inner carousel-div__inner">
+            <div class="carousel-item active carousel-div__inner__item">
+                <img src="./imagens/_MG_2783.jpg" class="d-block w-100 carousel-div__inner__item__img" alt="Slide 1">
+                <div class="carousel-caption carousel-div__inner__item__caption">
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/_MG_2783.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/_MG_2832.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- JS -->
+    <script src="./scripts/main.js" type="module"></script>
 </body>
+
 </html>
