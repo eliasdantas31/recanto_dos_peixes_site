@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+// cores
+$preto: #000;
+$branco: #fff;
+$laranja: #E84C3D;
+$azul: #3D82C5;
+$verde: #2E8B57;
+
+// fontes
+$fonte-padrao: 'Open Sans', sans-serif;
+$fonte-titulo: 'Playfair Display SC', serif;
+
+// breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+
+//mixers
+@mixin display($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
