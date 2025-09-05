@@ -1,0 +1,41 @@
+@use '../config/variaveis.scss' as v;
+
+.footer{
+    height: max-content;
+    width: 100%;
+    padding: 40px;
+
+    &__content{
+        height: max-content;
+        width: 100%;
+        @include v.display(flex, space-around, start);
+        
+        div{
+            h4{
+                font-size: 22px;
+                font-family: v.$fonte-padrao;
+                margin-bottom: 15px;
+            }
+
+            p{
+                font-size: 22px;
+                font-family: v.$fonte-padrao;
+                margin-bottom: 10px;
+            }
+
+            iframe{
+                height: 180px;
+                width: 300px;
+                border-radius: 5px;
+            }
+
+            div{
+                @include v.display(flex, space-between, center);
+                a{
+                    font-size: 30px;
+                    color: v.$preto;
+                }
+            }
+        }
+    }
+}

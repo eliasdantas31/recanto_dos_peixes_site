@@ -6,11 +6,14 @@
 // componentes
 @use './componentes/header';
 @use './componentes/footer';
+@use './componentes/page__home-content';
 @use './componentes/contato';
+@use './componentes/galeria';
 
 // estilos _pages
 @use './_pages/carousel'; //home
-@use './_pages/restaurente_home'; //restaurante_page
+@use './_pages/restaurente'; //restaurante_page
+@use './_pages/infraestrutura.scss'; //infraestrutura_page
 
 * {
     margin: 0;

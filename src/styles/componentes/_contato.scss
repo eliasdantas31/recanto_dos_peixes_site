@@ -18,34 +18,4 @@
             font-family: v.$fonte-padrao;
         }
     }
-
-    button {
-        height: max-content;
-        width: 250px;
-        padding: 1rem;
-        font-size: 20px;
-        font-family: v.$fonte-titulo;
-        font-weight: lighter;
-        color: v.$branco;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-}
-
-.--restaurante__button {
-    background-color: v.$laranja;
-}
-
-.--infraestrutura__button {
-    background-color: v.$azul;
-}
-
-.--lago__button {
-    background-color: v.$verde;
 }

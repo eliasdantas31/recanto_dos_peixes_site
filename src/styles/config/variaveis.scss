@@ -21,3 +21,63 @@ $tablet: 1024px;
     justify-content: $justify;
     align-items: $align;
 }
+
+.restaurante__button {
+    background-color: $laranja;
+    height: max-content;
+    width: max-content;
+    padding: 1rem;
+    font-size: 30px;
+    font-family: $fonte-titulo;
+    font-weight: lighter;
+    text-decoration: none;
+    color: $branco;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.infraestrutura__button {
+    background-color: $azul;
+    height: max-content;
+    width: 250px;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: $fonte-titulo;
+    font-weight: lighter;
+    text-decoration: none;
+    color: $branco;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.lago__button {
+    background-color: $verde;
+    height: max-content;
+    width: 250px;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: $fonte-titulo;
+    font-weight: lighter;
+    text-decoration: none;
+    color: $branco;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

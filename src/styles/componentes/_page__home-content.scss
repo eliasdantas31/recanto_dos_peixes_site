@@ -1,0 +1,75 @@
+@use '../config/variaveis.scss' as v;
+
+.page__home-content {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    @include v.display(flex, center, center);
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        background-repeat: inherit;
+        filter: brightness(30%);
+        z-index: 0;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: v.$branco;
+
+        h1 {
+            font-size: 96px;
+            font-family: v.$fonte-titulo;
+            font-weight: lighter;
+        }
+
+        p {
+            font-size: 36px;
+            font-family: v.$fonte-padrao;
+        }
+    }
+
+    a {
+        position: absolute;
+        bottom: 20px; // espaçamento da borda inferior
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 75px;
+        color: v.$branco;
+        z-index: 1;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateX(-50%) translateY(5px);
+        }
+    }
+}
+
+.page__home-background-restaurante {
+    background-image: url('../imagens/pesqueiro_4.jpg');
+}
+
+.page__home-background-infraestrutura {
+    background-image: url('../imagens/pesqueiro_5.jpg');
+}
+
+
+.page__home-background-lago {
+    background-image: url('../imagens/pesqueiro_6.jpg');
+}
