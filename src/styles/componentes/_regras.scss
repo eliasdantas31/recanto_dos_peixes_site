@@ -1,0 +1,30 @@
+@use '../config/variaveis.scss' as v;
+
+.regras {
+    height: max-content;
+    width: 100%;
+    @include v.display(flex, center, center);
+    flex-direction: column;
+    margin: 5rem 0;
+    padding: 25px;
+    h1{
+        font-size: 64px;
+        font-family: v.$fonte-titulo;
+        font-weight: lighter;
+    }
+
+    h4{
+        font-size: 35px;
+        font-family: v.$fonte-padrao;
+        font-weight: lighter;
+        margin-bottom: 2rem;
+    }
+
+    p{
+        font-size: 40px;
+        font-family: v.$fonte-padrao;
+        font-weight: lighter;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}

@@ -1,1 +1,155 @@
 @use '../config/variaveis.scss' as v;
+
+.content {
+    .carousel-infraestrutura {
+        --gap: 2rem;
+        --ctrl-offset: 3rem;
+
+        text-align: center;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        &__wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        &__track {
+            display: flex;
+            gap: var(--gap);
+            transition: transform 0.45s ease;
+            will-change: transform;
+            padding: 0.25rem 0;
+        }
+
+        /* calcula 3 itens por vez subtraindo 2 gaps do 100% */
+        &__item {
+            flex: 0 0 calc((100% - (var(--gap) * 2)) / 3);
+            box-sizing: border-box;
+            padding: 1rem;
+            text-align: center;
+
+            img {
+                width: 199px;
+                height: 199px;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+                object-fit: cover;
+                display: block;
+            }
+
+            &>.carousel-infraestrutura__stars {
+                color: gold;
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h6 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                color: #333;
+                margin: 0 auto;
+                max-width: 260px;
+                line-height: 1.4;
+            }
+        }
+
+        &__control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            border: 0;
+            width: 53px;
+            height: auto;
+            border-radius: 50%;
+            background: transparent;
+            color: #000;
+            font-size: 3rem;
+            line-height: 53px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform .2s ease;
+
+            &:hover {
+                transform: translateY(-50%) scale(1.03);
+            }
+
+            &:active {
+                transform: translateY(-50%) scale(0.98);
+            }
+
+            &--prev {
+                left: calc(var(--ctrl-offset) * -1);
+            }
+
+            &--next {
+                right: calc(var(--ctrl-offset) * -1);
+            }
+        }
+
+        /* responsivo */
+        @media (max-width: 992px) {
+            &__item {
+                flex-basis: calc((100% - var(--gap)) / 2);
+            }
+
+            /* 2 por vez */
+        }
+
+        @media (max-width: 600px) {
+            &__item {
+                flex-basis: 100%;
+            }
+
+            /* 1 por vez */
+            &__control {
+                display: inline-flex;
+                right: 0.5rem;
+                left: auto;
+            }
+
+            /* aproxima controles */
+        }
+    }
+}
+
+.mapa {
+    height: max-content;
+    width: 100%;
+    @include v.display(flex, center, center);
+    flex-direction: column;
+    padding: 3rem 4rem;
+    background-color: #d9d9d9;
+
+    h1 {
+        font-size: 64px;
+        font-family: v.$fonte-titulo;
+        font-weight: lighter;
+        margin-bottom: 1.5rem;
+    }
+
+    iframe {
+        height: 483px;
+        width: 100%;
+    }
+}

@@ -1,37 +1,6 @@
 @use '../config/variaveis.scss' as v;
 
 .content {
-    height: max-content;
-    width: 100%;
-    background-color: v.$branco;
-    padding: 3rem 0.5rem;
-
-    &__header {
-        @include v.display(flex, center, center);
-        flex-direction: column;
-
-        h1 {
-            font-size: 64px;
-            font-family: v.$fonte-titulo;
-            font-weight: lighter;
-        }
-
-        h4 {
-            font-size: 36px;
-            font-family: v.$fonte-padrao;
-            margin-bottom: 2.5rem;
-            font-weight: lighter;
-        }
-
-        p {
-            font-size: 28px;
-            font-family: v.$fonte-padrao;
-            color: #666666;
-            margin-bottom: 5.5rem;
-            text-align: center;
-        }
-    }
-
     .carousel-restaurante {
         --gap: 2rem;
         --ctrl-offset: clamp(0.5rem, 3vw, 2.5rem);
@@ -88,7 +57,7 @@
             width: 53px;
             height: auto;
             background: transparent;
-            color: #000;
+            color: v.$preto;
             font-size: 3rem;
             line-height: 53px;
             text-align: center;

@@ -6,7 +6,6 @@
     width: 100%;
     @include v.display(flex, center, end);
     flex-direction: column;
-    background-image: url('../imagens/pesqueiro_4.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,4 +49,16 @@
             margin-bottom: 70px;
         }
     }
+}
+
+.galeria__background-restaurante {
+    background-image: url('../imagens/pesqueiro_4.jpg');
+}
+
+.galeria__background-infraestrutura {
+    background-image: url('../imagens/pesqueiro_5.jpg');
+}
+
+.galeria__background-lago {
+    background-image: url('../imagens/pesqueiro_6.jpg');
 }

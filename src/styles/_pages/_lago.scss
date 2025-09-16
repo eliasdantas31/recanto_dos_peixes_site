@@ -1,0 +1,115 @@
+@use '../config/variaveis.scss' as v;
+
+.content {
+  &__header {
+    &__tabela {
+      width: 100%;
+      padding: 2rem 0;
+      @include v.display(flex, space-around, center);
+      gap: 2rem;
+    }
+  }
+}
+
+.content__header__tabela__infos {
+
+  &--1,
+  &--2 {
+    height: 715px;
+    width: 550px;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    @include v.display(flex, center, center);
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+
+    h4 {
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    hr {
+      width: 80%;
+      border: 1px solid currentColor;
+      margin-bottom: 1rem;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 0.25rem;
+
+      p:first-child {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      p:last-child {
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      text-align: left;
+
+      li {
+        font-size: 16px;
+        margin: 0.5rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+
+        &::before {
+          content: "—";
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      width: 70%;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &--1 {
+    background-color: v.$preto;
+    color: v.$branco;
+
+    a {
+      background-color: #eee;
+      color: v.$preto;
+    }
+  }
+
+  &--2 {
+    background-color: v.$branco;
+    color: v.$preto;
+    border: 1px solid #ccc;
+
+    a {
+      background-color: v.$preto;
+      color: v.$branco;
+    }
+  }
+}
