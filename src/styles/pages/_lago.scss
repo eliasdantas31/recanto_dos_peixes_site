@@ -6,6 +6,7 @@
       width: 100%;
       padding: 2rem 0;
       @include v.display(flex, space-around, center);
+      flex-wrap: wrap; // 🔑 garante quebra em telas menores
       gap: 2rem;
     }
   }
@@ -15,8 +16,10 @@
 
   &--1,
   &--2 {
-    height: 715px;
-    width: 550px;
+    height: auto; // 🔑 remove altura fixa para não quebrar em mobile
+    min-height: 600px;
+    width: 100%;
+    max-width: 550px;
     padding: 2rem 1.5rem;
     border-radius: 10px;
     text-align: center;
@@ -26,9 +29,10 @@
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
 
     h4 {
-      font-size: 28px;
+      font-size: 1.75rem; // 28px
       font-weight: 400;
       margin-bottom: 0.5rem;
+      font-family: v.$fonte-titulo;
     }
 
     hr {
@@ -44,12 +48,12 @@
       gap: 0.25rem;
 
       p:first-child {
-        font-size: 24px;
+        font-size: 1.25rem; // 20px
         font-weight: bold;
       }
 
       p:last-child {
-        font-size: 64px;
+        font-size: 3.5rem; // 56px
         font-weight: bold;
         line-height: 1;
       }
@@ -62,10 +66,11 @@
       text-align: left;
 
       li {
-        font-size: 16px;
+        font-size: 1rem;
         margin: 0.5rem 0;
         position: relative;
         padding-left: 1.5rem;
+        font-family: v.$fonte-padrao;
 
         &::before {
           content: "—";
@@ -81,13 +86,14 @@
       width: 70%;
       padding: 0.75rem 2rem;
       border-radius: 4px;
-      font-size: 18px;
+      font-size: 1.1rem;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
+      font-family: v.$fonte-titulo;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
@@ -110,6 +116,45 @@
     a {
       background-color: v.$preto;
       color: v.$branco;
+    }
+  }
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: v.$tablet) {
+  .content__header__tabela {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content__header__tabela__infos--1,
+  .content__header__tabela__infos--2 {
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+@media (max-width: v.$mobile) {
+
+  .content__header__tabela__infos--1,
+  .content__header__tabela__infos--2 {
+    padding: 1.5rem 1rem;
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    div p:last-child {
+      font-size: 2.5rem;
+    }
+
+    ul li {
+      font-size: 0.9rem;
+    }
+
+    a {
+      width: 100%;
+      font-size: 1rem;
     }
   }
 }

@@ -1,0 +1,100 @@
+@use '../config/variaveis.scss' as v;
+
+.galeria__page {
+    width: 100%;
+    height: max-content;
+    padding: 25px;
+    @include v.display(flex, center, center);
+    flex-direction: column;
+
+    &__title {
+        h1 {
+            font-size: 4rem; // 64px
+            font-family: v.$fonte-titulo;
+            font-weight: lighter;
+            margin: 25px;
+            text-align: center;
+        }
+    }
+
+    &__content--one,
+    &__content--two {
+        width: 100%;
+        height: max-content;
+        @include v.display(flex, center, center);
+        flex-wrap: wrap; // evita quebra ruim em telas menores
+
+        img {
+            width: 400px;
+            height: 830px;
+            object-fit: cover;
+            margin: 15px;
+            border-radius: 8px;
+            display: block;
+        }
+
+        div {
+            @include v.display(flex, center, center);
+            flex-direction: column;
+
+            img {
+                width: 800px;
+                height: 400px;
+                object-fit: cover;
+                margin: 15px;
+                border-radius: 8px;
+                display: block;
+            }
+        }
+    }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: v.$tablet) {
+    .galeria__page {
+        &__title h1 {
+            font-size: 2.5rem;
+        }
+
+        &__content--one,
+        &__content--two {
+            img {
+                width: 280px;
+                height: 500px;
+            }
+
+            div img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: v.$mobile) {
+    .galeria__page {
+        padding: 15px;
+
+        &__title h1 {
+            font-size: 2rem;
+            margin: 15px 0;
+        }
+
+        &__content--one,
+        &__content--two {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                max-width: 280px;
+                height: auto;
+            }
+
+            div img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

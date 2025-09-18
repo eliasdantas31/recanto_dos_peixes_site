@@ -1,0 +1,150 @@
+@use "sass:color";
+@use '../../styles/config/variaveis.scss' as v;
+
+.header {
+  width: 100%;
+  height: max-content;
+  @include v.display(flex, space-around, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  z-index: 999;
+
+  &__social {
+    width: 30%;
+    @include v.display(flex, space-around, center);
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: v.$branco;
+      font-size: 1.2rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+      i {
+        font-size: 2rem; // 32px
+      }
+
+      &:hover {
+        color: color.adjust(v.$branco, $lightness: 10%);
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      width: 4.375rem;  // 70px
+      height: 4.375rem; // 70px
+    }
+  }
+
+  &__menu {
+    width: 30%;
+    @include v.display(flex, space-around, center);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      font-size: 1.625rem; // 26px
+      font-family: v.$fonte-padrao;
+      font-weight: lighter;
+      text-decoration: none;
+      color: v.$branco;
+      transition: color 0.3s ease;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: v.$branco;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem; // 32px
+    color: v.$branco;
+    cursor: pointer;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  &__mobile {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: v.$branco;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      a {
+        font-size: 1.5rem; // 24px
+        font-family: v.$fonte-padrao;
+        color: v.$preto;
+        text-decoration: none;
+      }
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.header__mobile__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.75rem; // 28px
+  color: v.$preto;
+  cursor: pointer;
+}
+
+.blur {
+  backdrop-filter: blur(50px);
+}
+
+@media (max-width: v.$tablet) {
+  .header {
+    justify-content: space-around;
+
+    &__social,
+    &__menu {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: v.$mobile) {
+  .header {
+    // ajustes extras se precisar
+  }
+}

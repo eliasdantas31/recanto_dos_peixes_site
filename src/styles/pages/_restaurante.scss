@@ -10,8 +10,8 @@
 
         &__title {
             margin-bottom: 1rem;
-            font-size: 55px;
-            font-family: v.$fonte-padrao;
+            font-size: 3.4rem; // ~55px
+            font-family: v.$fonte-titulo;
             font-weight: lighter;
         }
 
@@ -22,7 +22,7 @@
         }
 
         &__viewport {
-            overflow: hidden; // só o viewport corta
+            overflow: hidden; // corta apenas dentro do viewport
             border-radius: 12px;
         }
 
@@ -31,14 +31,14 @@
             gap: var(--gap);
             transition: transform 0.45s ease;
             will-change: transform;
-            padding: 0.25rem 0; // só pra não “colar” no topo/baixo
+            padding: 0.25rem 0; // espaço vertical mínimo
         }
 
         &__item {
-            box-sizing: border-box;
-            flex: 0 0 calc(33.333% - (var(--gap) * 2 / 3)); // 3 por tela, compensando o gap
+            flex: 0 0 calc((100% - (var(--gap) * 2)) / 3); // 3 por vez
             border-radius: 8px;
             overflow: hidden;
+            box-sizing: border-box;
 
             img {
                 display: block;
@@ -55,36 +55,37 @@
             z-index: 5;
             border: none;
             width: 53px;
-            height: auto;
-            background: transparent;
+            height: 53px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
             color: v.$preto;
-            font-size: 3rem;
-            line-height: 53px;
+            font-size: 2rem;
             text-align: center;
             cursor: pointer;
-            transition: transform .2s ease;
+            transition: transform 0.2s ease, background 0.3s ease;
 
             &:hover {
-                transform: translateY(-50%) scale(1.1);
+                transform: translateY(-50%) scale(1.05);
+                background: rgba(255, 255, 255, 0.9);
             }
 
             &:active {
-                transform: translateY(-50%) scale(1);
+                transform: translateY(-50%) scale(0.95);
             }
 
             &--prev {
-                left: calc(var(--ctrl-offset) * -5);
+                left: calc(var(--ctrl-offset) * -2);
             }
 
             &--next {
-                right: calc(var(--ctrl-offset) * -5);
+                right: calc(var(--ctrl-offset) * -2);
             }
         }
 
-        // Responsivo: 2 por tela no tablet, 1 no mobile
+        /* ===== Responsivo ===== */
         @media (max-width: v.$tablet) {
             &__item {
-                flex-basis: calc(50% - (var(--gap) / 2));
+                flex-basis: calc((100% - var(--gap)) / 2); // 2 por vez
             }
 
             &__control {
@@ -99,21 +100,23 @@
         }
 
         @media (max-width: v.$mobile) {
-            --ctrl-offset: 0.25rem;
+            --ctrl-offset: 0.5rem;
 
             &__item {
-                flex-basis: 100%;
+                flex-basis: 100%; // 1 por vez
             }
 
             &__control {
-                background: v.$branco;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
 
                 &--prev {
-                    left: calc(var(--ctrl-offset) * -8);
+                    left: 0.25rem;
                 }
 
                 &--next {
-                    right: calc(var(--ctrl-offset) * -8);
+                    right: 0.25rem;
                 }
             }
         }

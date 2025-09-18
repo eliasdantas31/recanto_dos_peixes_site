@@ -1,24 +1,31 @@
-// configurações gerais/componentes
+// ============================
+// Configurações gerais
+// ============================
+@use './config/variaveis' as v;
 
-//configurações gerais
-@use 'sass:math';
-@use './config/variaveis.scss' as v;
-// componentes
-@use './componentes/header';
-@use './componentes/footer';
+// ============================
+// Componentes
+// ============================
+@use '../componentes/header/header' as *;
+@use '../componentes/footer/footer' as *;
 @use './componentes/page__home-content';
 @use './componentes/contato';
 @use './componentes/galeria';
 @use './componentes/regras';
 
-// estilos _pages
-@use './_pages/carousel'; //home
-@use './_pages/restaurente'; //restaurante_page
-@use './_pages/infraestrutura.scss'; //infraestrutura_page
-@use './_pages/lago.scss'; //lago_page
-@use './_pages/cadapio'; //cadapio_page
-@use './_pages/galeria_page'; //galeria_page
+// ============================
+// Estilos das páginas
+// ============================
+@use './pages/carousel'; // Home
+@use './pages/restaurante'; // Restaurante (corrigido)
+@use './pages/infraestrutura'; // Infraestrutura
+@use './pages/lago'; // Lago
+@use './pages/cardapio'; // Cardápio (corrigido)
+@use './pages/galeria_page'; // Galeria
 
+// ============================
+// Reset básico
+// ============================
 * {
     margin: 0;
     padding: 0;
@@ -27,12 +34,13 @@
 
 body {
     width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
+// ============================
+// Conteúdo geral
+// ============================
 .content {
-    height: max-content;
     width: 100%;
     background-color: v.$branco;
     padding: 3rem 0.5rem;
@@ -40,26 +48,60 @@ body {
     &__header {
         @include v.display(flex, center, center);
         flex-direction: column;
+        text-align: center;
 
         h1 {
-            font-size: 64px;
+            font-size: 4rem; // ~64px
             font-family: v.$fonte-titulo;
             font-weight: lighter;
         }
 
         h4 {
-            font-size: 36px;
+            font-size: 2.25rem; // ~36px
             font-family: v.$fonte-padrao;
             margin-bottom: 2.5rem;
             font-weight: lighter;
         }
 
         p {
-            font-size: 28px;
+            font-size: 1.75rem; // ~28px
             font-family: v.$fonte-padrao;
             color: #666666;
             margin-bottom: 5.5rem;
-            text-align: center;
+            max-width: 900px;
+        }
+    }
+
+    // Responsividade
+    @media (max-width: v.$tablet) {
+        &__header {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h4 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @media (max-width: v.$mobile) {
+        &__header {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

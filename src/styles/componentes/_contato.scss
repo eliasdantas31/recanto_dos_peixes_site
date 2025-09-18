@@ -1,21 +1,57 @@
 @use '../config/variaveis.scss' as v;
 
 .contact__section {
-    height: 200px;
-    width: 100%;
-    @include v.display(flex, space-around, center);
-    background-color: #d9d9d9;
+  width: 100%;
+  min-height: 200px; // garante altura mínima mas permite crescer
+  @include v.display(flex, space-around, center);
+  background-color: #d9d9d9;
+  padding: 2rem;
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem; // ~40px
+      font-family: v.$fonte-titulo;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.75rem; // ~28px
+      font-family: v.$fonte-padrao;
+      margin: 0;
+    }
+  }
+
+  /* responsivo */
+  @media (max-width: v.$tablet) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
 
     &__text {
-        h1 {
-            font-size: 40px;
-            font-family: v.$fonte-titulo;
-            letter-spacing: 1px;
-        }
+      h1 {
+        font-size: 2rem;
+      }
 
-        p {
-            font-size: 28px;
-            font-family: v.$fonte-padrao;
-        }
+      p {
+        font-size: 1.2rem;
+      }
     }
+  }
+
+  @media (max-width: v.$mobile) {
+    padding: 1rem;
+
+    &__text {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }

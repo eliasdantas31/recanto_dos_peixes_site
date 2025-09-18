@@ -1,10 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // header blur (seu código original)
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (header) header.classList.toggle('blur', window.scrollY > 0);
-    });
+import "../componentes/header/header.js";
+import "../componentes/footer/footer.js";
 
+document.addEventListener("DOMContentLoaded", () => {
     // ---------- Generic carousel initializer ----------
     function initCarouselBase(containerEl) {
         // encontra a "base class" do tipo carousel-xxx (ex: carousel-infraestrutura)
@@ -18,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nextBtn = containerEl.querySelector(`.${baseClass}__control--next`);
 
         if (!track || !viewport || items.length === 0 || !prevBtn || !nextBtn) {
-            // não inicializa se algo estiver faltando
-            return;
+            return; // não inicializa se algo estiver faltando
         }
 
         let index = 0;
@@ -38,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const vpW = viewport.clientWidth;
             const itW = items[0].getBoundingClientRect().width;
             const gap = getGap();
-            // quantos itens cabem (garante ao menos 1)
-            return Math.max(1, Math.floor((vpW + gap) / (itW + gap)));
+            return Math.max(1, Math.floor((vpW + gap) / (itW + gap))); // ao menos 1 item
         }
 
         function maxIndex() {
@@ -49,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function update() {
             const step = stepWidth();
-            // assegura index válido
             const max = maxIndex();
             if (index < 0) index = max;
             if (index > max) index = 0;
@@ -68,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             update();
         });
 
-        // resize -> recalcula (debounce)
+        // resize -> recalcula (com debounce)
         let rt;
         window.addEventListener('resize', () => {
             clearTimeout(rt);
@@ -84,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
 
         Promise.all(loadPromises).then(() => {
-            // forçar um pequeno timeout para garantir layout
             setTimeout(update, 50);
         });
 
@@ -95,10 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializa todos os containers que tenham uma classe começando por "carousel-"
     const possibleCarousels = document.querySelectorAll('[class*="carousel-"]');
     possibleCarousels.forEach(el => {
-        // só inicializa elementos que têm exatamente uma classe raiz do tipo carousel-xxx (evita inicializar itens internos)
         const hasRoot = Array.from(el.classList).some(c => /^carousel-[a-z0-9_-]+$/.test(c));
         if (hasRoot) initCarouselBase(el);
     });
-
     // ---------- FIM Generic carousel initializer ----------
 });

@@ -2,7 +2,7 @@
 
 .page__home-content {
     position: relative;
-    height: 100vh;
+    min-height: 100vh; // mais seguro em mobile
     width: 100%;
     @include v.display(flex, center, center);
     flex-direction: column;
@@ -22,6 +22,7 @@
         background-size: inherit;
         background-position: inherit;
         background-repeat: inherit;
+        background-color: #000; // fallback
         filter: brightness(30%);
         z-index: 0;
     }
@@ -33,23 +34,25 @@
         color: v.$branco;
 
         h1 {
-            font-size: 96px;
+            font-size: 6rem; // ~96px
             font-family: v.$fonte-titulo;
             font-weight: lighter;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            font-size: 36px;
+            font-size: 2.25rem; // ~36px
             font-family: v.$fonte-padrao;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
         }
     }
 
     a {
         position: absolute;
-        bottom: 20px; // espaçamento da borda inferior
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 75px;
+        font-size: 4.7rem; // ~75px
         color: v.$branco;
         z-index: 1;
         text-decoration: none;
@@ -59,8 +62,42 @@
             transform: translateX(-50%) translateY(5px);
         }
     }
+
+    // Responsividade
+    @media (max-width: v.$tablet) {
+        &__text {
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        a {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: v.$mobile) {
+        &__text {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        a {
+            font-size: 2rem;
+        }
+    }
 }
 
+// fundos específicos
 .page__home-background-restaurante {
     background-image: url('../imagens/pesqueiro_4.jpg');
 }
@@ -68,7 +105,6 @@
 .page__home-background-infraestrutura {
     background-image: url('../imagens/pesqueiro_5.jpg');
 }
-
 
 .page__home-background-lago {
     background-image: url('../imagens/pesqueiro_6.jpg');

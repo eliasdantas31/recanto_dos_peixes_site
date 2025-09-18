@@ -5,51 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recanto Dos Peixes</title>
+
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- SCSS compilado -->
-    <link rel="stylesheet" href="./styles/main.scss">
+    <!-- SCSS (Parcel compila) -->
+    <link rel="stylesheet" href="../styles/main.scss">
 </head>
 
 <body>
-    <header class="header">
-        <ul class="header__social">
-            <li>
-                <a href="#">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bi bi-facebook"></i>
-                </a>
-            </li>
-        </ul>
-        <a href="./index.html"><img src="./imagens/Logo_Pesqueiro.png" alt="Logo_Pesqueiro"></a>
-        <ul class="header__menu">
-            <li>
-                <a href="./index.html">
-                    Início
-                </a>
-            </li>
-            <li>
-                <a href="./_restaurante.html">
-                    Restaurante
-                </a>
-            </li>
-            <li>
-                <a href="./_lago.html">
-                    Lagos
-                </a>
-            </li>
-        </ul>
-    </header>
+    <header-component></header-component>
 
     <section class="page__home-content page__home-background-infraestrutura">
         <div class="page__home-content__text">
@@ -62,7 +27,6 @@
         <a href="#infraestrutura__content__id"><i class="bi bi-caret-down-fill"></i></a>
     </section>
 
-    <!-- CORREÇÃO: apenas 1 atributo class -->
     <section class="content" id="infraestrutura__content__id">
         <div class="content__header">
             <h1>RECANTO DOS PEIXES</h1>
@@ -73,7 +37,7 @@
             </p>
         </div>
 
-        <!-- ☆ -->
+        <!-- Carousel -->
         <div class="carousel-infraestrutura">
             <h2 class="carousel-infraestrutura__title">O que Nossos Clientes Dizem</h2>
 
@@ -87,41 +51,49 @@
                     <div class="carousel-infraestrutura__track">
                         <!-- 6 items -->
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_1.jpg" alt="Cliente 1">
+                            <img src="../assets/imagens/pesqueiro_1.jpg" alt="Cliente 1">
                             <div class="carousel-infraestrutura__stars">★★★★★</div>
                             <h6>Valkiria Silva</h6>
                             <p>Lugar bonito, agradável e organizado.
                                 Atendimento top, tem espaço kids, música, comida saborosa, no capricho.</p>
                         </div>
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_2.jpg" alt="Cliente 2">
+                            <img src="../assets/imagens/pesqueiro_2.jpg" alt="Cliente 2">
                             <div class="carousel-infraestrutura__stars">★★★★☆</div>
                             <h6>Renato Rodrigues</h6>
-                            <p>Foi a melhor pescaria que já tive. É um ótimo lugar para quem gosta de pegar peixe grande.</p>
+                            <p>Foi a melhor pescaria que já tive. É um ótimo lugar para quem gosta de pegar peixe
+                                grande.</p>
                         </div>
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_3.jpg" alt="Cliente 3">
+                            <img src="../assets/imagens/pesqueiro_3.jpg" alt="Cliente 3">
                             <div class="carousel-infraestrutura__stars">★★★★★</div>
                             <h6>Lara Rs</h6>
-                            <p>Lugar maravilhoso, organizado, fomos comemorar o dia das maes, local estava lotado porém tudo perfeito, comida não demorou os atendentes muito prestativos, local bom para ir com crianças.</p>
+                            <p>Lugar maravilhoso, organizado, fomos comemorar o dia das maes, local estava lotado porém
+                                tudo perfeito, comida não demorou os atendentes muito prestativos, local bom para ir com
+                                crianças.</p>
                         </div>
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_4.jpg" alt="Cliente 4">
+                            <img src="../assets/imagens/pesqueiro_4.jpg" alt="Cliente 4">
                             <div class="carousel-infraestrutura__stars">★★★★☆</div>
                             <h6>Estevão Raymundo da Silva</h6>
-                            <p>Porção de filé de tilápia muito boa atende muito bem! Preço acessível e lembrando que é um pesqueiro, Não é um resort e nenhum spa.</p>
+                            <p>Porção de filé de tilápia muito boa atende muito bem! Preço acessível e lembrando que é
+                                um pesqueiro, Não é um resort e nenhum spa.</p>
                         </div>
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_5.jpg" alt="Cliente 5">
+                            <img src="../assets/imagens/pesqueiro_5.jpg" alt="Cliente 5">
                             <div class="carousel-infraestrutura__stars">★★★★★</div>
                             <h6>Thiago Curi</h6>
-                            <p>Lugar nota mil , sempre bem organizado, sempre com ótimo atendimento , comida muito boa , lugar agradável pra vir com a família !!!!</p>
+                            <p>Lugar nota mil , sempre bem organizado, sempre com ótimo atendimento , comida muito boa ,
+                                lugar agradável pra vir com a família !!!!</p>
                         </div>
                         <div class="carousel-infraestrutura__item">
-                            <img src="./imagens/pesqueiro_6.jpg" alt="Cliente 6">
+                            <img src="../assets/imagens/pesqueiro_6.jpg" alt="Cliente 6">
                             <div class="carousel-infraestrutura__stars">★★★★☆</div>
                             <h6>Ubaldo Filho</h6>
-                            <p>Bom lugar de lazer, com pesca esportiva e restaurante, que serve principalmente peixes. Assados ou fritos, com tempero equilibrado. Há outras opções de pratos com carnes. Preços na média. Ambiente familiar, agradável, arborizado, aberto, bem ventilado. Não cobra serviço. Não serve no seu prato. Recomendo.</p>
+                            <p>Bom lugar de lazer, com pesca esportiva e restaurante, que serve principalmente peixes.
+                                Assados ou fritos, com tempero equilibrado. Há outras opções de pratos com carnes.
+                                Preços na média. Ambiente familiar, agradável, arborizado, aberto, bem ventilado. Não
+                                cobra serviço. Não serve no seu prato. Recomendo.</p>
                         </div>
                     </div>
                 </div>
@@ -133,6 +105,7 @@
             </div>
         </div>
     </section>
+
     <section class="contact__section">
         <div class="contact__section__text">
             <h1>QUER ENTENDER COMO FUNCIONA?</h1>
@@ -140,6 +113,7 @@
         </div>
         <a href="#" class="infraestrutura__button">CLIQUE AQUI</a>
     </section>
+
     <section class="galeria galeria__background-infraestrutura">
         <div class="galeria__content">
             <h1>Nossa Infraestrutura</h1>
@@ -147,10 +121,15 @@
             <a href="./_galeria.html" class="infraestrutura__button">VER GALERIA</a>
         </div>
     </section>
+
     <section class="mapa">
         <h1>ENCONTRE-NOS</h1>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d470942.0543410169!2d-47.688626!3d-22.756666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c6372dcad171ad%3A0xcc8ff68cd9d75215!2sPesqueiro%20Recanto%20dos%20Peixes!5e0!3m2!1spt-BR!2sus!4v1757096355911!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d470942.0543410169!2d-47.688626!3d-22.756666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c6372dcad171ad%3A0xcc8ff68cd9d75215!2sPesqueiro%20Recanto%20dos%20Peixes!5e0!3m2!1spt-BR!2sus!4v1757096355911!5m2!1spt-BR!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+
     <section class="regras">
         <h1>Regras do Pesqueiro</h1>
         <h4>É estritamente proibido...</h4>
@@ -160,34 +139,10 @@
         <p>4.Fazer barulho na área de pesca.</p>
         <p>5.Incomodar outros clientes</p>
     </section>
-    <footer class="footer">
-        <div class="footer__content">
-            <div>
-                <h4>Venha Nos Visitar</h4>
-                <p>Estr. Jacob Canale, 160 (Estrada Piracicaba Anhumas),</p>
-                <p>Piracicaba-SP, São Paulo, Brasil</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d470942.0543410169!2d-47.688626!3d-22.756666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c6372dcad171ad%3A0xcc8ff68cd9d75215!2sPesqueiro%20Recanto%20dos%20Peixes!5e0!3m2!1spt-BR!2sus!4v1757096355911!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div>
-                <h4>Entre em Contato</h4>
-                <p>WhatsApp: +55 (19) 98815-1127</p>
-                <p>Telefone: +55 (19) 3434 2895</p>
-            </div>
-            <div>
-                <h4>Horario de Funcionamento</h4>
-                <p>De Domingo a Domingo 24h por dia!</p>
-            </div>
-            <div>
-                <h4>Nossas Redes</h4>
-                <div class="footer__content__redes">
-                    <a href=""><i class="bi bi-whatsapp"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="./scripts/main.js"></script>
+
+    <footer-component></footer-component>
+
+    <script type="module" src="../scripts/main.js"></script>
 </body>
 
 </html>

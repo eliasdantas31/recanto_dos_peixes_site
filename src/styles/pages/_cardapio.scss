@@ -4,17 +4,16 @@
   width: 100%;
 
   &__title {
-    height: max-content;
     width: 100%;
     @include v.display(flex, center, center);
     flex-direction: column;
     margin: 7rem 0;
 
     h2 {
-      width: max-content;
       font-family: v.$fonte-titulo;
-      font-size: 80px;
+      font-size: 5rem; // 80px -> rem para responsividade
       font-weight: lighter;
+      text-align: center;
 
       &::after {
         content: "";
@@ -28,43 +27,40 @@
   }
 
   &__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include v.display(flex, space-between, center);
     margin-bottom: 2rem;
     gap: 1rem;
   }
 
   &__img {
-    height: max-content;
-    width: max-content;
     margin: 2rem 5rem;
+    width: max-content;
 
     img {
-      height: 400px;
       width: 600px;
+      height: 400px;
       object-fit: cover;
       border-radius: 10px;
+      display: block;
     }
   }
 
   &__info {
-    height: max-content;
     width: 60vw;
-    color: #fff;
+    color: v.$branco;
     border-radius: 100px 0 0 100px;
     padding: 3rem;
 
     h3 {
       margin: 0;
-      font-size: 60px;
+      font-size: 3.75rem; // 60px
       font-family: v.$fonte-titulo;
       font-weight: lighter;
     }
 
     p {
       margin: 0.5rem 0 0;
-      font-size: 32px;
+      font-size: 2rem; // 32px
       font-family: v.$fonte-padrao;
     }
 
@@ -84,33 +80,43 @@
   /* ====== Responsivo ====== */
   @media (max-width: v.$tablet) {
     &__img {
-      width: 150px;
-      height: 100px;
+      margin: 1rem auto;
+      max-width: 300px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &__info {
-      padding: 0.8rem 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
 
       h3 {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
       }
 
       p {
-        font-size: 0.85rem;
+        font-size: 1rem;
       }
     }
   }
 
   @media (max-width: v.$mobile) {
     &__row {
-      flex-direction: column !important;
+      flex-direction: column;
       text-align: center;
     }
 
     &__img {
-      width: 100%;
+      margin: 1rem 0;
       max-width: 280px;
-      height: 160px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &__info {
@@ -119,11 +125,11 @@
       padding: 1rem;
 
       h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     }
   }

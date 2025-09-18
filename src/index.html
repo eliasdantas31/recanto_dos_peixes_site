@@ -13,40 +13,44 @@
 </head>
 
 <body>
+    <!-- Header (componente) -->
+    <header-component></header-component>
+
+    <!-- Carrossel -->
     <div id="carousel" class="carousel slide carousel-div" data-bs-ride="carousel">
         <div class="carousel-inner carousel-div__inner">
 
             <!-- Slide 1 -->
             <div class="carousel-item active carousel-div__inner__item">
-                <img src="./imagens/pesqueiro_1.jpg" class="d-block w-100 carousel-div__inner__item__img" alt="Comida">
+                <img src="./assets/imagens/pesqueiro_1.jpg" class="d-block w-100 carousel-div__inner__item__img" alt="Comida">
                 <div class="carousel-caption carousel-div__inner__item__caption">
                     <h6>Recanto Dos Peixes, aqui você encontra...</h6>
                     <h1>NOSSAS MELHORES DELÍCIAS</h1>
                     <p>Uma experiência gastronômica com sabores únicos.</p>
-                    <a href="./_restaurante.html" class="btn btn-laranja">Nosso Restaurante</a>
+                    <a href="./pages/_restaurante.html" class="btn btn-laranja">Nosso Restaurante</a>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item carousel-div__inner__item">
-                <img src="./imagens/pesqueiro_2.jpg" class="d-block w-100 carousel-div__inner__item__img" alt="Família">
+                <img src="./assets/imagens/pesqueiro_2.jpg" class="d-block w-100 carousel-div__inner__item__img" alt="Família">
                 <div class="carousel-caption carousel-div__inner__item__caption">
                     <h6>Recanto Dos Peixes, um lugar...</h6>
                     <h1>PERFEITO PARA A FAMÍLIA</h1>
                     <p>Um lugar pensado com objetivo de ser o mais acolhedor <br> possível.</p>
-                    <a href="./_infraestrutura.html" class="btn btn-azul">Nossa Infraestrutura</a>
+                    <a href="./pages/_infraestrutura.html" class="btn btn-azul">Nossa Infraestrutura</a>
                 </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-item carousel-div__inner__item">
-                <img src="./imagens/pesqueiro_3.jpg" class="d-block w-100 carousel-div__inner__item__img"
+                <img src="./assets/imagens/pesqueiro_3.jpg" class="d-block w-100 carousel-div__inner__item__img"
                     alt="Pesca Esportiva">
                 <div class="carousel-caption carousel-div__inner__item__caption">
                     <h6>Recanto Dos Peixes, perfeito para...</h6>
                     <h1>PESCA ESPORTIVA</h1>
                     <p>Ideal para quem busca os maiores desafios quando o assunto <br> se trata da pesca.</p>
-                    <a href="./_lago.html" class="btn btn-verde">Sobre a Pesca</a>
+                    <a href="./pages/_lago.html" class="btn btn-verde">Sobre a Pesca</a>
                 </div>
             </div>
 
@@ -63,9 +67,12 @@
         </button>
     </div>
 
-    <!-- Bootstrap JS (bundle com Popper) -->
+    <!-- Footer (componente) -->
+    <footer-component></footer-component>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./scripts/main.js" type="module"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>

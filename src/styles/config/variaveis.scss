@@ -1,83 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
-// cores
+// ============================
+// Cores
+// ============================
 $preto: #000;
 $branco: #fff;
 $laranja: #E84C3D;
 $azul: #3D82C5;
 $verde: #2E8B57;
 
-// fontes
+// ============================
+// Fontes
+// ============================
 $fonte-padrao: 'Open Sans', sans-serif;
 $fonte-titulo: 'Playfair Display SC', serif;
 
-// breakpoints
+// ============================
+// Breakpoints
+// ============================
 $mobile: 768px;
 $tablet: 1024px;
 
-//mixers
+// ============================
+// Mixins
+// ============================
 @mixin display($display, $justify, $align) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
 }
 
+@mixin button($bg-color, $font-size: 1.25rem) {
+    background-color: $bg-color;
+    height: max-content;
+    width: max-content;
+    padding: 1rem 2rem;
+    font-size: $font-size;
+    font-family: $fonte-titulo;
+    font-weight: lighter;
+    text-decoration: none;
+    color: $branco;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// ============================
+// Botões prontos
+// ============================
 .restaurante__button {
-    background-color: $laranja;
-    height: max-content;
-    width: max-content;
-    padding: 1rem 2rem;
-    font-size: 30px;
-    font-family: $fonte-titulo;
-    font-weight: lighter;
-    text-decoration: none;
-    color: $branco;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    @include button($laranja, 1.875rem);
 }
 
+// 30px
 .infraestrutura__button {
-    background-color: $azul;
-    height: max-content;
-    width: max-content;
-    padding: 1rem 2rem;
-    font-size: 20px;
-    font-family: $fonte-titulo;
-    font-weight: lighter;
-    text-decoration: none;
-    color: $branco;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    @include button($azul, 1.25rem);
 }
 
+// 20px
 .lago__button {
-    background-color: $verde;
-    height: max-content;
-    width: max-content;
-    padding: 1rem 2rem;
-    font-size: 20px;
-    font-family: $fonte-titulo;
-    font-weight: lighter;
-    text-decoration: none;
-    color: $branco;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+    @include button($verde, 1.25rem);
 }
+
+// 20px
