@@ -6,8 +6,8 @@
 // ============================
 // Componentes
 // ============================
-@use '../componentes/header/header' as *;
-@use '../componentes/footer/footer' as *;
+@use '../componentes/header/header';
+@use '../componentes/footer/footer';
 @use './componentes/page__home-content';
 @use './componentes/contato';
 @use './componentes/galeria';

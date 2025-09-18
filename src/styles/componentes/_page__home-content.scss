@@ -22,7 +22,7 @@
         background-size: inherit;
         background-position: inherit;
         background-repeat: inherit;
-        background-color: #000; // fallback
+        background-color: v.$preto; // fallback
         filter: brightness(30%);
         z-index: 0;
     }
@@ -99,13 +99,13 @@
 
 // fundos específicos
 .page__home-background-restaurante {
-    background-image: url('../imagens/pesqueiro_4.jpg');
+    background-image: url('../../assets/imagens/pesqueiro_4.jpg');
 }
 
 .page__home-background-infraestrutura {
-    background-image: url('../imagens/pesqueiro_5.jpg');
+    background-image: url('../../assets/imagens/pesqueiro_5.jpg');
 }
 
 .page__home-background-lago {
-    background-image: url('../imagens/pesqueiro_6.jpg');
+    background-image: url('../../assets/imagens/pesqueiro_6.jpg');
 }
