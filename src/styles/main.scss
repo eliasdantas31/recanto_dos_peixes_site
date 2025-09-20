@@ -26,88 +26,88 @@
 // Reset básico
 // ============================
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 }
 
 // ============================
 // Conteúdo geral
 // ============================
 .content {
-    width: 100%;
-    background-color: v.$branco;
-    padding: 3rem 0.5rem;
+  width: 100%;
+  background-color: v.$branco;
+  padding: 3rem 0.5rem;
 
+  &__header {
+    @include v.display(flex, center, center);
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem; // ~64px
+      font-family: v.$fonte-titulo;
+      font-weight: lighter;
+    }
+
+    h4 {
+      font-size: 2.25rem; // ~36px
+      font-family: v.$fonte-padrao;
+      margin-bottom: 2.5rem;
+      font-weight: lighter;
+    }
+
+    p {
+      font-size: 1.75rem; // ~28px
+      font-family: v.$fonte-padrao;
+      color: #666666;
+      margin-bottom: 5.5rem;
+      max-width: 900px;
+    }
+  }
+
+  // Responsividade
+  @media (max-width: v.$tablet) {
     &__header {
-        @include v.display(flex, center, center);
-        flex-direction: column;
-        text-align: center;
+      h1 {
+        font-size: 3rem;
+      }
 
-        h1 {
-            font-size: 4rem; // ~64px
-            font-family: v.$fonte-titulo;
-            font-weight: lighter;
-        }
+      h4 {
+        font-size: 1.75rem;
+      }
 
-        h4 {
-            font-size: 2.25rem; // ~36px
-            font-family: v.$fonte-padrao;
-            margin-bottom: 2.5rem;
-            font-weight: lighter;
-        }
-
-        p {
-            font-size: 1.75rem; // ~28px
-            font-family: v.$fonte-padrao;
-            color: #666666;
-            margin-bottom: 5.5rem;
-            max-width: 900px;
-        }
+      p {
+        font-size: 1.25rem;
+      }
     }
+  }
 
-    // Responsividade
-    @media (max-width: v.$tablet) {
-        &__header {
-            h1 {
-                font-size: 3rem;
-            }
+  @media (max-width: v.$mobile) {
+    &__header {
+      h1 {
+        font-size: 2rem;
+      }
 
-            h4 {
-                font-size: 1.75rem;
-            }
+      h4 {
+        font-size: 1.4rem;
+      }
 
-            p {
-                font-size: 1.25rem;
-            }
-        }
+      p {
+        font-size: 1rem;
+      }
     }
-
-    @media (max-width: v.$mobile) {
-        &__header {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h4 {
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-    }
+  }
 }
 
 //estilização header
 .header {
-  width: 100%;
+  width: 100vw;
   height: max-content;
   @include v.display(flex, space-around, center);
   position: fixed;
@@ -139,7 +139,7 @@ body {
 
   &__logo {
     img {
-      width: 4.375rem;  // 70px
+      width: 4.375rem; // 70px
       height: 4.375rem; // 70px
     }
   }
@@ -248,15 +248,15 @@ body {
   }
 }
 
-@media (max-width: v.$mobile) {
-  .header {
-    // ajustes extras se precisar
-  }
-}
+// @media (max-width: v.$mobile) {
+//   .header {
+//     ajustes extras se precisar
+//   }
+// }
 
 // estilização footer
 .footer {
-  width: 100%;
+  width: 100vw;
   height: max-content;
   padding: 2.5rem; // 40px
 
@@ -285,7 +285,7 @@ body {
       }
 
       div {
-        @include v.display(flex, space-between, center);
+        @include v.display(flex, space-around, center);
 
         a {
           font-size: 1.875rem; // 30px
@@ -295,6 +295,25 @@ body {
           &:hover {
             color: color.adjust(v.$preto, $lightness: -15%);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: v.$tablet) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        width: 100%;
+        text-align: center;
+
+        h4, p, iframe, div {
+          margin-bottom: 2rem;
         }
       }
     }

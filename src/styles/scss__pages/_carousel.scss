@@ -48,7 +48,7 @@
                 }
 
                 .btn {
-                    font-size: 1.9rem; // 30px
+                    font-size: 2rem; // 30px
                     font-family: v.$fonte-titulo;
                     padding: 0.5rem 1.5rem;
                     border-radius: 5px;
@@ -75,26 +75,27 @@
 /* ===== Responsividade ===== */
 @media (max-width: v.$tablet) {
     .carousel-div {
-        height: 80vh;
+        height: 100vh;
 
         &__inner__item {
-            height: 80vh;
+            height: 100vh;
 
             &__img {
-                height: 80vh;
+                height: 100vh;
             }
 
             &__caption {
                 h1 {
-                    font-size: 3rem;
+                    font-size: 4.5rem;
                 }
 
                 p {
-                    font-size: 1.2rem;
+                    font-size: 2.5rem;
+                    margin-bottom: 6rem;
                 }
 
                 .btn {
-                    font-size: 1rem;
+                    font-size: 3rem;
                     padding: 0.4rem 1rem;
                 }
             }
@@ -104,13 +105,13 @@
 
 @media (max-width: v.$mobile) {
     .carousel-div {
-        height: 70vh;
+        height: 100vh;
 
         &__inner__item {
-            height: 70vh;
+            height: 100vh;
 
             &__img {
-                height: 70vh;
+                height: 100vh;
             }
 
             &__caption {
@@ -119,16 +120,16 @@
                 }
 
                 h1 {
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                 }
 
                 p {
-                    font-size: 1rem;
-                    margin-bottom: 2rem;
+                    font-size: 1.5rem;
+                    margin-bottom: 4rem;
                 }
 
                 .btn {
-                    font-size: 0.9rem;
+                    font-size: 1.5rem;
                     padding: 0.3rem 0.8rem;
                 }
             }
