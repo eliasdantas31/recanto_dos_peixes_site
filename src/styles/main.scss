@@ -107,7 +107,7 @@ body {
 
 //estilização header
 .header {
-  width: 100vw;
+  width: 100%;
   height: max-content;
   @include v.display(flex, space-around, center);
   position: fixed;
@@ -256,7 +256,7 @@ body {
 
 // estilização footer
 .footer {
-  width: 100vw;
+  width: 100%;
   height: max-content;
   padding: 2.5rem; // 40px
 

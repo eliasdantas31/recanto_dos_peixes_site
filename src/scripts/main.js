@@ -103,18 +103,22 @@ class Header extends HTMLElement {
 
                 const toggle = this.querySelector("#header-toggle");
                 const mobile = this.querySelector("#header-mobile");
-                const close = this.querySelector("#header-close");
+                // const close = this.querySelector("#header-close");
                 const header = this.querySelector(".header");
 
-                if (toggle && mobile && close) {
+                if (toggle && mobile) {
                     toggle.addEventListener("click", () => {
-                        mobile.setAttribute("aria-hidden", "false");
-                        mobile.classList.add("is-active");
-                    });
-
-                    close.addEventListener("click", () => {
-                        mobile.setAttribute("aria-hidden", "true");
-                        mobile.classList.remove("is-active");
+                        if (mobile.attributes['aria-hidden'].value === "true") {
+                            mobile.setAttribute("aria-hidden", "false");
+                            mobile.classList.add("is-active");
+                            header.style.backgroundColor = "#fff";
+                            toggle.style.color = "#000";
+                        } else {
+                            mobile.setAttribute("aria-hidden", "true");
+                            mobile.classList.remove("is-active");
+                            header.style.backgroundColor = "transparent";
+                            toggle.style.color = "#fff";
+                        }
                     });
                 }
 
