@@ -1,6 +1,3 @@
-import "../componentes/header/header.js";
-import "../componentes/footer/footer.js";
-
 document.addEventListener("DOMContentLoaded", () => {
     // ---------- Generic carousel initializer ----------
     function initCarouselBase(containerEl) {
@@ -93,3 +90,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // ---------- FIM Generic carousel initializer ----------
 });
+
+// componentização header
+class Header extends HTMLElement {
+    connectedCallback() {
+        const url = new URL("../components/header.html", import.meta.url);
+
+        fetch(url)
+            .then(res => res.text())
+            .then(data => {
+                this.innerHTML = data;
+
+                const toggle = this.querySelector("#header-toggle");
+                const mobile = this.querySelector("#header-mobile");
+                const close = this.querySelector("#header-close");
+                const header = this.querySelector(".header");
+
+                if (toggle && mobile && close) {
+                    toggle.addEventListener("click", () => {
+                        mobile.setAttribute("aria-hidden", "false");
+                        mobile.classList.add("is-active");
+                    });
+
+                    close.addEventListener("click", () => {
+                        mobile.setAttribute("aria-hidden", "true");
+                        mobile.classList.remove("is-active");
+                    });
+                }
+
+                window.addEventListener("scroll", () => {
+                    if (header) {
+                        header.classList.toggle("blur", window.scrollY > 0);
+                    }
+                });
+            })
+            .catch(err => console.error("Erro ao carregar header:", err));
+    }
+}
+customElements.define("header-component", Header);
+
+// componentização footer
+class Footer extends HTMLElement {
+    connectedCallback() {
+        const url = new URL("../components/footer.html", import.meta.url);
+
+        fetch(url)
+            .then(res => res.text())
+            .then(data => {
+                this.innerHTML = data;
+            })
+            .catch(err => console.error("Erro ao carregar footer:", err));
+    }
+}
+customElements.define("footer-component", Footer);
