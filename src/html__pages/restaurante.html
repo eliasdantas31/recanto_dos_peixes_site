@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recanto Dos Peixes</title>
     <link rel="icon" type="image/x-icon" href="./assets/imagens/Logo_Pesqueiro.png">
-    
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
@@ -19,25 +25,25 @@
 
 <body>
     <header-component></header-component>
-    
+
     <section class="page__home-content page__home-background-restaurante">
         <div class="page__home-content__text">
-            <h1>O VERDADEIRO SABOR</h1>
-            <p>Você encontra, no RECANTO DOS PEIXES</p>
+            <h1 data-aos="fade-down">O VERDADEIRO SABOR</h1>
+            <p data-aos="fade-up">Você encontra, no RECANTO DOS PEIXES</p>
         </div>
-        <a href="#restaurante__content__id"><i class="bi bi-caret-down-fill"></i></a>
+        <a href="#restaurante__content__id" class="animate__animated animate__bounce animate__infinite animate__slower"><i class="bi bi-caret-down-fill"></i></a>
     </section>
     <section class="content" id="restaurante__content__id">
         <div class="content__header">
-            <h1>RECANTO DOS PEIXES</h1>
-            <h4>RESTAURANTE</h4>
-            <p>Desfrute do momento e tenha uma experiência única no seu almoço, <br>
+            <h1 data-aos="fade-down">RECANTO DOS PEIXES</h1>
+            <h4 data-aos="fade-up">RESTAURANTE</h4>
+            <p data-aos="zoom-in">Desfrute do momento e tenha uma experiência única no seu almoço, <br>
                 aqui no Pesqueiro Recanto dos Peixes você irá sempre ter a melhor <br>
                 experiência.</p>
         </div>
 
         <div class="carousel-restaurante">
-            <h2 class="carousel-restaurante__title">Nossas Melhores Opções</h2>
+            <h2 class="carousel-restaurante__title" data-aos="fade-down">Nossas Melhores Opções</h2>
 
             <div class="carousel-restaurante__wrapper">
                 <!-- controles ficam posicionados em relação ao wrapper -->
@@ -47,17 +53,23 @@
                 <!-- viewport recorta o track, sem cortar os controles -->
                 <div class="carousel-restaurante__viewport">
                     <div class="carousel-restaurante__track">
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_1.jpg" alt="Imagem 1">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_1.jpg"
+                                alt="Imagem 1">
                         </div>
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_2.jpg" alt="Imagem 2">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_2.jpg"
+                                alt="Imagem 2">
                         </div>
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_3.jpg" alt="Imagem 3">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_3.jpg"
+                                alt="Imagem 3">
                         </div>
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_4.jpg" alt="Imagem 4">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_4.jpg"
+                                alt="Imagem 4">
                         </div>
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_5.jpg" alt="Imagem 5">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_5.jpg"
+                                alt="Imagem 5">
                         </div>
-                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_6.jpg" alt="Imagem 6">
+                        <div class="carousel-restaurante__item"><img src="../assets/imagens/pesqueiro_6.jpg"
+                                alt="Imagem 6">
                         </div>
                     </div>
                 </div>
@@ -69,22 +81,24 @@
     </section>
     <section class="contact__section">
         <div class="contact__section__text">
-            <h1>QUER ENTENDER COMO FUNCIONA?</h1>
-            <p>Entre em contato conosco!</p>
+            <h1 data-aos="fade-right">QUER ENTENDER COMO FUNCIONA?</h1>
+            <p data-aos="fade-left">Entre em contato conosco!</p>
         </div>
-        <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D551934342895%26fbclid%3DPAZXh0bgNhZW0CMTEAAacvgP6jxk_q1tQooPjA9p7xbG6QXHNRxoDRFzrRuHZZ8PhaDbKHzKjciVGG9Q_aem_9WPKwiTo2rGS2hJA4buY6A&e=AT17wKMpmIwJidyeCj5zjuZ9sR_D_E-kMaCWRGqFVwej35tsDy_AmvHHFF-CdnxA-MPesGcuq_AzX9kVHWl4aMUhAhGWzoI2I5bzUmsylzUUbVQ02TEUn0KAHA" class="restaurante__button">CLIQUE AQUI</a>
+        <a href="https://w.app/pesqueiro_recanto_dos_peixes" class="restaurante__button animate__animated animate__pulse animate__infinite animate__slower" data-aos="zoom-in">CLIQUE AQUI</a>
     </section>
     <section class="galeria galeria__background-restaurante">
-        <div class="galeria__content">
+        <div class="galeria__content" data-aos="fade-left">
             <h1>Nosso Cardápio</h1>
-            <p>O que falar do nosso cardápio, um cardápio completo com apenas o que de melhor há, uma experiência gastronômica única.</p>
+            <p>O que falar do nosso cardápio, um cardápio completo com apenas o que de melhor há, uma experiência
+                gastronômica única.</p>
             <a href="./cardapio.html" class="restaurante__button">VER MENU</a>
         </div>
     </section>
-    
+
     <footer-component></footer-component>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
 </body>

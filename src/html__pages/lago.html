@@ -7,6 +7,12 @@
     <title>Recanto Dos Peixes</title>
     <link rel="icon" type="image/x-icon" href="./assets/imagens/Logo_Pesqueiro.png">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
@@ -22,20 +28,20 @@
 
     <section class="page__home-content page__home-background-lago">
         <div class="page__home-content__text">
-            <h1>Desfrute da Experiência</h1>
-            <p>
+            <h1 data-aos="fade-down">Desfrute da Experiência</h1>
+            <p data-aos="fade-up">
                 Aproveite a natureza, no Pesqueiro Recanto dos Peixes, <br>
                 uma experiência completa para a familia.
             </p>
         </div>
-        <a href="#lago__content__id"><i class="bi bi-caret-down-fill"></i></a>
+        <a href="#lago__content__id" class="animate__animated animate__bounce animate__infinite animate__slower"><i class="bi bi-caret-down-fill"></i></a>
     </section>
 
     <section class="content bg-white" id="lago__content__id">
         <div class="content__header">
-            <h1>RECANTO DOS PEIXES</h1>
-            <h4>LAGO</h4>
-            <p>
+            <h1 data-aos="fade-down">RECANTO DOS PEIXES</h1>
+            <h4 data-aos="fade-up">LAGO</h4>
+            <p data-aos="zoom-in">
                 O Pesqueiro Recanto dos Peixes conta com dois lagos para pesca esportiva: um com grandes exemplares e
                 outro ideal para peixes de menor porte, onde você pode fisgar espécies como tambaquis, pacus, tambacus,
                 pintados, pirararas, dourados, cacharas, piauçus, patingas, corimbatás, tilápias e traírões. Para
@@ -44,7 +50,7 @@
             </p>
 
             <div class="content__header__tabela">
-                <div class="content__header__tabela__infos--1">
+                <div class="content__header__tabela__infos--1" data-aos="fade-right">
                     <h4>LAGO PRINCIPAL</h4>
                     <hr>
                     <div>
@@ -57,10 +63,10 @@
                         <li>Peixes de várias espécies</li>
                         <li>Acompanhamento até 6 anos não paga</li>
                     </ul>
-                    <a href="#">Saiba Mais</a>
+                    <a href="https://w.app/pesqueiro_recanto_dos_peixes">Saiba Mais</a>
                 </div>
 
-                <div class="content__header__tabela__infos--2">
+                <div class="content__header__tabela__infos--2" data-aos="fade-left">
                     <h4>LAGO SECUNDÁRIO</h4>
                     <hr>
                     <div>
@@ -73,7 +79,7 @@
                         <li>Acompanhamento até 6 anos não paga</li>
                         <li>Valor convertido em consumação (Por pessoa)</li>
                     </ul>
-                    <a href="#">Saiba Mais</a>
+                    <a href="https://w.app/pesqueiro_recanto_dos_peixes">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -81,21 +87,21 @@
 
     <section class="contact__section">
         <div class="contact__section__text">
-            <h1>QUER ENTENDER COMO FUNCIONA?</h1>
-            <p>Entre em contato conosco!</p>
+            <h1 data-aos="fade-right">QUER ENTENDER COMO FUNCIONA?</h1>
+            <p data-aos="fade-left">Entre em contato conosco!</p>
         </div>
-        <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D551934342895%26fbclid%3DPAZXh0bgNhZW0CMTEAAacvgP6jxk_q1tQooPjA9p7xbG6QXHNRxoDRFzrRuHZZ8PhaDbKHzKjciVGG9Q_aem_9WPKwiTo2rGS2hJA4buY6A&e=AT17wKMpmIwJidyeCj5zjuZ9sR_D_E-kMaCWRGqFVwej35tsDy_AmvHHFF-CdnxA-MPesGcuq_AzX9kVHWl4aMUhAhGWzoI2I5bzUmsylzUUbVQ02TEUn0KAHA" class="lago__button">CLIQUE AQUI</a>
+        <a href="https://w.app/pesqueiro_recanto_dos_peixes" class="lago__button animate__animated animate__pulse animate__infinite animate__slower">CLIQUE AQUI</a>
     </section>
 
     <section class="galeria page__home-background-lago">
-        <div class="galeria__content">
+        <div class="galeria__content" data-aos="fade-left">
             <h1>Nossos Lagos</h1>
             <p>Nossos peixes são famosos e isso não é à toa! Venha dar uma olhada mais de perto, você mesmo.</p>
             <a href="./galeria.html" class="lago__button">Ver Galeria</a>
         </div>
     </section>
 
-    <section class="regras">
+    <section class="regras" data-aos="zoom-in">
         <h1>Regras do Pesqueiro</h1>
         <h4>É estritamente proibido...</h4>
         <p>1. Mais de duas varas por pescador (Será cobrado meia entrada por vara adicional).</p>
@@ -111,6 +117,7 @@
     <footer-component></footer-component>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/main.js"></script>
 </body>

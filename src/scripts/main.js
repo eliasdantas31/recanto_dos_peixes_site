@@ -1,3 +1,5 @@
+AOS.init();
+
 document.addEventListener("DOMContentLoaded", () => {
     // ---------- Generic carousel initializer ----------
     function initCarouselBase(containerEl) {
