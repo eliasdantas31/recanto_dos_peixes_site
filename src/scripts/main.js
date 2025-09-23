@@ -103,7 +103,6 @@ class Header extends HTMLElement {
 
                 const toggle = this.querySelector("#header-toggle");
                 const mobile = this.querySelector("#header-mobile");
-                // const close = this.querySelector("#header-close");
                 const header = this.querySelector(".header");
 
                 if (toggle && mobile) {

@@ -59,14 +59,13 @@
         &__content--one,
         &__content--two {
             img {
-                width: 280px;
-                height: 500px;
+                width: 250px;
+                height: 530px;
             }
 
             div img {
-                width: 100%;
-                max-width: 500px;
-                height: auto;
+                width: 500px;
+                height: 250px;
             }
         }
     }
@@ -93,6 +92,7 @@
 
             div img {
                 max-width: 100%;
+                max-width: 280px;
                 height: auto;
             }
         }

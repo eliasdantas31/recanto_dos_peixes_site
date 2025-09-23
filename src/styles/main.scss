@@ -202,13 +202,14 @@ body {
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 2rem;
 
       a {
         font-size: 1.5rem; // 24px
         font-family: v.$fonte-padrao;
         color: v.$preto;
         text-decoration: none;
+        margin: 0 2rem;
       }
     }
 
@@ -216,17 +217,6 @@ body {
       display: block;
     }
   }
-}
-
-.header__mobile__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.75rem; // 28px
-  color: v.$preto;
-  cursor: pointer;
 }
 
 .blur {
@@ -247,12 +237,6 @@ body {
     }
   }
 }
-
-// @media (max-width: v.$mobile) {
-//   .header {
-//     ajustes extras se precisar
-//   }
-// }
 
 // estilização footer
 .footer {
@@ -312,7 +296,10 @@ body {
         width: 100%;
         text-align: center;
 
-        h4, p, iframe, div {
+        h4,
+        p,
+        iframe,
+        div {
           margin-bottom: 2rem;
         }
       }
