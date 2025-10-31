@@ -31,6 +31,12 @@
   box-sizing: border-box;
 }
 
+// @media (max-width: v.$tablet) {
+//   * {
+//     overflow-x: hidden;
+//   }
+// }
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -225,6 +231,7 @@ body {
 
 @media (max-width: v.$tablet) {
   .header {
+    width: 100vw;
     justify-content: space-around;
 
     &__social,
@@ -287,6 +294,8 @@ body {
 
 @media (max-width: v.$tablet) {
   .footer {
+    width: 100vw;
+
     &__content {
       flex-direction: column;
       align-items: center;
