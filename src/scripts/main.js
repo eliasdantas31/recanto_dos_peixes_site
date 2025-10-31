@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const vpW = viewport.clientWidth;
             const itW = items[0].getBoundingClientRect().width;
             const gap = getGap();
-            return Math.max(1, Math.floor((vpW + gap) / (itW + gap))); // ao menos 1 item
+            return Math.max(1, Math.floor((vpW + gap) / (itW + gap)));
         }
 
         function maxIndex() {
