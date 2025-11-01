@@ -35,7 +35,7 @@
   &__img {
     margin: 2rem 5rem;
     width: max-content;
-    border: 3.5px solid v.$cinza;
+    border: 3px solid v.$preto;
     border-radius: 5px;
 
     a {
@@ -106,19 +106,21 @@
 
   /* ====== Responsivo ====== */
   @media (max-width: v.$tablet) {
+    padding: 20px 0px 20px 20px;
+
     &__img {
       margin: 1rem auto;
-      max-width: 300px;
+      width: 80% !important;
 
       img {
-        width: 100%;
+        width: 100% !important;
         height: auto;
       }
     }
 
     &__info {
       padding: 1rem 1.5rem;
-      border-radius: 0px;
+      border-radius: 100px 0 0 100px;
 
       h3 {
         font-size: 1.8rem;
@@ -131,6 +133,8 @@
   }
 
   @media (max-width: v.$mobile) {
+    padding: 0px;
+
     &__row {
       flex-direction: column;
       text-align: center;
@@ -138,17 +142,11 @@
 
     &__img {
       margin: 1rem 0;
-      max-width: 280px;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
     }
 
     &__info {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 0px;
       padding: 1rem;
 
       h3 {

@@ -7,7 +7,6 @@
       padding: 2rem 0;
       @include v.display(flex, space-around, center);
       flex-wrap: wrap; // 🔑 garante quebra em telas menores
-      gap: 2rem;
     }
   }
 }

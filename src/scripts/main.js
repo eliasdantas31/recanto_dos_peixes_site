@@ -104,6 +104,7 @@ class Header extends HTMLElement {
                 this.innerHTML = data;
 
                 const toggle = this.querySelector("#header-toggle");
+                const toggleIcon = this.querySelector("#header-toggle-icon");
                 const mobile = this.querySelector("#header-mobile");
                 const header = this.querySelector(".header");
 
@@ -114,11 +115,13 @@ class Header extends HTMLElement {
                             mobile.classList.add("is-active");
                             header.style.backgroundColor = "#fff";
                             toggle.style.color = "#000";
+                            toggleIcon.classList.replace("bi-list", "bi-x-lg");
                         } else {
                             mobile.setAttribute("aria-hidden", "true");
                             mobile.classList.remove("is-active");
                             header.style.backgroundColor = "transparent";
                             toggle.style.color = "#fff";
+                            toggleIcon.classList.replace("bi-x-lg", "bi-list");
                         }
                     });
                 }
@@ -148,3 +151,27 @@ class Footer extends HTMLElement {
     }
 }
 customElements.define("footer-component", Footer);
+
+//componentização Whatsapp
+class Whatsapp extends HTMLElement {
+    connectedCallback() {
+        const url = new URL("../components/whatsapp_icon.html", import.meta.url);
+
+        fetch(url)
+            .then(res => res.text())
+            .then(data => {
+                this.innerHTML = data;
+
+                const whatsappIcon = this.querySelector("#whatsapp-icon");
+
+                window.addEventListener("scroll", () => {
+                    if (whatsappIcon) {
+                        whatsappIcon.classList.toggle("whatsapp-icon-show", window.scrollY > 0);
+                    }
+                });
+            })
+            .catch(err => console.error("Erro ao carregar whatsapp:", err));
+    }
+}
+
+customElements.define("whatsapp-component", Whatsapp);

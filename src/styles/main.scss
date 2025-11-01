@@ -31,12 +31,6 @@
   box-sizing: border-box;
 }
 
-// @media (max-width: v.$tablet) {
-//   * {
-//     overflow-x: hidden;
-//   }
-// }
-
 body {
   width: 100%;
   min-height: 100vh;
@@ -314,4 +308,29 @@ body {
       }
     }
   }
+}
+
+// estilização whatsapp icon
+.whatsapp-icon {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+  z-index: 100;
+  cursor: pointer;
+
+  i {
+    color: v.$verde;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: v.$mobile) {
+    right: 7rem;
+    font-size: 4rem;
+  }
+}
+
+.whatsapp-icon-show {
+  display: block;
 }

@@ -50,6 +50,11 @@ $tablet: 1024px;
     &:hover {
         transform: scale(1.05);
     }
+
+    @media(max-width: $tablet) {
+        font-size: .8rem;
+        padding: .6rem 2rem;
+    }
 }
 
 // ============================
