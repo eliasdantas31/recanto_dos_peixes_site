@@ -9,7 +9,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
 
     &::before {
         content: "";
@@ -106,5 +105,5 @@
 }
 
 .page__home-background-lago {
-    background-image: url('../assets/imagens/pesqueiro_6.jpg');
+    background-image: url('../assets/imagens/pesqueiro_lago.jpg');
 }
