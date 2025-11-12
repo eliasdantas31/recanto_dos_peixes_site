@@ -28,18 +28,18 @@
                 flex-direction: column;
                 color: v.$branco;
 
-                h6 {
-                    font-size: 1.6rem; // 25px
-                    font-family: v.$fonte-titulo;
-                    letter-spacing: 2px;
-                    margin-bottom: 2rem;
-                }
-
                 h1 {
                     font-size: 5.5rem; // 88px
                     font-family: v.$fonte-titulo;
                     font-weight: bold;
-                    margin-bottom: 5rem;
+                    margin-top: 5rem;
+                }
+
+                h6 {
+                    font-size: 1.6rem; // 25px
+                    font-family: v.$fonte-titulo;
+                    letter-spacing: 2px;
+                    margin: .5rem 0 4rem 0;
                 }
 
                 .btn {
