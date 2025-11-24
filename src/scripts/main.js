@@ -153,25 +153,25 @@ class Footer extends HTMLElement {
 customElements.define("footer-component", Footer);
 
 //componentização Whatsapp
-class Whatsapp extends HTMLElement {
-    connectedCallback() {
-        const url = new URL("../components/whatsapp_icon.html", import.meta.url);
+// class Whatsapp extends HTMLElement {
+//     connectedCallback() {
+//         const url = new URL("../components/whatsapp_icon.html", import.meta.url);
 
-        fetch(url)
-            .then(res => res.text())
-            .then(data => {
-                this.innerHTML = data;
+//         fetch(url)
+//             .then(res => res.text())
+//             .then(data => {
+//                 this.innerHTML = data;
 
-                const whatsappIcon = this.querySelector("#whatsapp-icon");
+//                 const whatsappIcon = this.querySelector("#whatsapp-icon");
 
-                window.addEventListener("scroll", () => {
-                    if (whatsappIcon) {
-                        whatsappIcon.classList.toggle("whatsapp-icon-show", window.scrollY > 0);
-                    }
-                });
-            })
-            .catch(err => console.error("Erro ao carregar whatsapp:", err));
-    }
-}
+//                 window.addEventListener("scroll", () => {
+//                     if (whatsappIcon) {
+//                         whatsappIcon.classList.toggle("whatsapp-icon-show", window.scrollY > 0);
+//                     }
+//                 });
+//             })
+//             .catch(err => console.error("Erro ao carregar whatsapp:", err));
+//     }
+// }
 
-customElements.define("whatsapp-component", Whatsapp);
+// customElements.define("whatsapp-component", Whatsapp);
